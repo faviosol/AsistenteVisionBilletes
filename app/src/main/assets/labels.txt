@@ -1,0 +1,4 @@
+10_soles
+20_soles
+50_soles
+100_soles

@@ -1,0 +1,150 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    xmlns:dist="http://schemas.android.com/apk/distribution"
+4    package="com.faviosol.vision.de.billetes"
+5    android:versionCode="1"
+6    android:versionName="1.0.0" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="24"
+10        android:targetSdkVersion="34" />
+11
+12    <!-- Enable instant app support -->
+13    <dist:module dist:instant="true" />
+13-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:9:5-40
+13-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:9:18-37
+14
+15    <!-- Declare features -->
+16    <uses-feature android:name="android.hardware.camera" />
+16-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:12:5-60
+16-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:12:19-57
+17
+18    <!-- Declare permissions -->
+19    <uses-permission android:name="android.permission.CAMERA" />
+19-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:15:5-65
+19-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:15:22-62
+20
+21    <permission
+21-->[androidx.core:core:1.12.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\b5642cbb50cde35e376b6358bcc006ea\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+22        android:name="com.faviosol.vision.de.billetes.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+22-->[androidx.core:core:1.12.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\b5642cbb50cde35e376b6358bcc006ea\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+23        android:protectionLevel="signature" />
+23-->[androidx.core:core:1.12.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\b5642cbb50cde35e376b6358bcc006ea\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+24
+25    <uses-permission android:name="com.faviosol.vision.de.billetes.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+25-->[androidx.core:core:1.12.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\b5642cbb50cde35e376b6358bcc006ea\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+25-->[androidx.core:core:1.12.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\b5642cbb50cde35e376b6358bcc006ea\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+26    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+27    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+28    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+29
+30    <application
+30-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:17:5-47:19
+31        android:allowBackup="true"
+31-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:21:9-35
+32        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+32-->[androidx.core:core:1.12.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\b5642cbb50cde35e376b6358bcc006ea\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+33        android:debuggable="true"
+34        android:extractNativeLibs="false"
+35        android:icon="@mipmap/ic_launcher"
+35-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:18:9-43
+36        android:label="@string/app_name"
+36-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:20:9-41
+37        android:roundIcon="@mipmap/ic_launcher_round"
+37-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:19:9-54
+38        android:taskAffinity=""
+38-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:22:9-32
+39        android:testOnly="true" >
+40        <activity
+40-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:25:9-45:20
+41            android:name="org.tensorflow.lite.examples.objectdetection.MainActivity"
+41-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:26:13-41
+42            android:clearTaskOnLaunch="true"
+42-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:27:13-45
+43            android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize"
+43-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:33:13-91
+44            android:exported="true"
+44-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:29:13-36
+45            android:icon="@mipmap/ic_launcher"
+45-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:30:13-47
+46            android:resizeableActivity="true"
+46-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:32:13-46
+47            android:rotationAnimation="seamless"
+47-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:31:13-49
+48            android:theme="@style/AppTheme" >
+48-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:28:13-44
+49
+50            <!-- Main app intent filter -->
+51            <intent-filter>
+51-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:37:13-40:29
+52                <action android:name="android.intent.action.MAIN" />
+52-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:38:17-69
+52-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:38:25-66
+53
+54                <category android:name="android.intent.category.LAUNCHER" />
+54-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:39:17-77
+54-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:39:27-74
+55            </intent-filter>
+56
+57            <!-- Declare notch support -->
+58            <meta-data
+58-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:43:13-83
+59                android:name="android.notch_support"
+59-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:43:24-60
+60                android:value="true" />
+60-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:43:61-81
+61        </activity>
+62
+63        <service
+63-->[androidx.camera:camera-camera2:1.3.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\26a9934b3a11e6334d80c286b4c67d3a\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:24:9-33:19
+64            android:name="androidx.camera.core.impl.MetadataHolderService"
+64-->[androidx.camera:camera-camera2:1.3.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\26a9934b3a11e6334d80c286b4c67d3a\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:25:13-75
+65            android:enabled="false"
+65-->[androidx.camera:camera-camera2:1.3.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\26a9934b3a11e6334d80c286b4c67d3a\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:26:13-36
+66            android:exported="false" >
+66-->[androidx.camera:camera-camera2:1.3.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\26a9934b3a11e6334d80c286b4c67d3a\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:27:13-37
+67            <meta-data
+67-->[androidx.camera:camera-camera2:1.3.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\26a9934b3a11e6334d80c286b4c67d3a\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:30:13-32:89
+68                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+68-->[androidx.camera:camera-camera2:1.3.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\26a9934b3a11e6334d80c286b4c67d3a\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:31:17-103
+69                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+69-->[androidx.camera:camera-camera2:1.3.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\26a9934b3a11e6334d80c286b4c67d3a\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:32:17-86
+70        </service>
+71
+72        <uses-library
+72-->[androidx.window:window:1.1.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\d619306280220cd6b67efee3b52d4d99\transformed\jetified-window-1.1.0\AndroidManifest.xml:23:9-25:40
+73            android:name="androidx.window.extensions"
+73-->[androidx.window:window:1.1.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\d619306280220cd6b67efee3b52d4d99\transformed\jetified-window-1.1.0\AndroidManifest.xml:24:13-54
+74            android:required="false" />
+74-->[androidx.window:window:1.1.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\d619306280220cd6b67efee3b52d4d99\transformed\jetified-window-1.1.0\AndroidManifest.xml:25:13-37
+75        <uses-library
+75-->[androidx.window:window:1.1.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\d619306280220cd6b67efee3b52d4d99\transformed\jetified-window-1.1.0\AndroidManifest.xml:26:9-28:40
+76            android:name="androidx.window.sidecar"
+76-->[androidx.window:window:1.1.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\d619306280220cd6b67efee3b52d4d99\transformed\jetified-window-1.1.0\AndroidManifest.xml:27:13-51
+77            android:required="false" />
+77-->[androidx.window:window:1.1.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\d619306280220cd6b67efee3b52d4d99\transformed\jetified-window-1.1.0\AndroidManifest.xml:28:13-37
+78
+79        <provider
+79-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\c5e4ccd38efde3bdbca75ec509c5bfea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+80            android:name="androidx.startup.InitializationProvider"
+80-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\c5e4ccd38efde3bdbca75ec509c5bfea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+81            android:authorities="com.faviosol.vision.de.billetes.androidx-startup"
+81-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\c5e4ccd38efde3bdbca75ec509c5bfea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+82            android:exported="false" >
+82-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\c5e4ccd38efde3bdbca75ec509c5bfea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+83            <meta-data
+83-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\c5e4ccd38efde3bdbca75ec509c5bfea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+84                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+84-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\c5e4ccd38efde3bdbca75ec509c5bfea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+85                android:value="androidx.startup" />
+85-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\c5e4ccd38efde3bdbca75ec509c5bfea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+86            <meta-data
+86-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\USER\.gradle\caches\8.14.4\transforms\7fdf9db19b88652b0f5006a9a74a3555\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+87                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+87-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\USER\.gradle\caches\8.14.4\transforms\7fdf9db19b88652b0f5006a9a74a3555\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+88                android:value="androidx.startup" />
+88-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\USER\.gradle\caches\8.14.4\transforms\7fdf9db19b88652b0f5006a9a74a3555\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+89        </provider>
+90    </application>
+91
+92</manifest>

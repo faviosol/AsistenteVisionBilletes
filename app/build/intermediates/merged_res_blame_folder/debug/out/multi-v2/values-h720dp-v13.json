@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "org.tensorflow.lite.examples.objectdetection.app-mergeDebugResources-51:/values-h720dp-v13/values-h720dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\8.14.4\\transforms\\845ed0b8be1b4ba8abad1e56393242ee\\transformed\\appcompat-1.6.1\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                }
+            ]
+        }
+    ]
+}
