@@ -1,0 +1,17 @@
+# Carpetas de compilación (generadas automáticamente)
+build/
+app/build/
+
+# Archivos locales de Android Studio
+*.iml
+.gradle/
+local.properties
+.idea/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Scripts y archivos que no pertenecen al proyecto
+crear_pptx.py
+*.pptx
