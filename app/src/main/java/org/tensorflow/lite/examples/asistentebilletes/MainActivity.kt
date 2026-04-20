@@ -3,7 +3,7 @@ package org.tensorflow.lite.examples.asistentebilletes
 import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import org.tensorflow.lite.examples.asistentebilletes.databinding.ActivityMainBinding
+import com.faviosol.vision.de.billetes.databinding.ActivityMainBinding
 
 /**
  * Main entry point into our app. This app follows the single-activity pattern, and all

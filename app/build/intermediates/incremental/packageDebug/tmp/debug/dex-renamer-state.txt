@@ -1,4 +1,4 @@
-#Sun Apr 19 20:24:19 PET 2026
+#Sun Apr 19 21:10:32 PET 2026
 base.0=C\:\\Users\\USER\\Desktop\\Documentos de la U\\Proyecto de github\\AsistenteVisionBilletes\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\USER\\Desktop\\Documentos de la U\\Proyecto de github\\AsistenteVisionBilletes\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\USER\\Desktop\\Documentos de la U\\Proyecto de github\\AsistenteVisionBilletes\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex

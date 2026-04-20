@@ -5,7 +5,7 @@ apply plugin: "androidx.navigation.safeargs"
 apply plugin: 'de.undercouch.download'
 
 android {
-    namespace 'org.tensorflow.lite.examples.asistentebilletes'
+    namespace 'com.faviosol.vision.de.billetes'
     compileSdkVersion 34
 
     kapt {
