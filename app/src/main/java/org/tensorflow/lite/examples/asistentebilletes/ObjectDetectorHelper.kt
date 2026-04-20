@@ -44,7 +44,7 @@ class ObjectDetectorHelper(
     // 1 = lento pero eficiente
     // 4 = muy rápido pero consume mucho
 
-    var maxResults: Int = 3,                // Cuántos objetos máximo detectar en cada imagen
+    var maxResults: Int = 1,                // Cuántos objetos máximo detectar en cada imagen
     // 1 = solo el objeto más probable
     // 5 = hasta 5 objetos diferentes
 
