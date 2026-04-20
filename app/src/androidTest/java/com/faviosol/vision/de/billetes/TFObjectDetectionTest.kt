@@ -15,9 +15,10 @@ import org.junit.runner.RunWith
 import org.tensorflow.lite.support.label.Category
 import org.tensorflow.lite.task.vision.detector.Detection
 /**
- * Instrumented test, which will execute on an Android device.
+ * Prueba instrumentada que se ejecuta directamente en un dispositivo Android real o emulador.
  *
- * See [testing documentation](http://d.android.com/tools/testing).
+ * Verifica que el modelo billetes.tflite produzca resultados consistentes
+ * y que las coordenadas de los cuadros de deteccion esten dentro del tamanio de la imagen.
  */
 @RunWith(AndroidJUnit4::class)
 class TFObjectDetectionTest {
@@ -40,7 +41,7 @@ class TFObjectDetectionTest {
                 objectDetectorListener =
                     object : ObjectDetectorHelper.DetectorListener {
                         override fun onError(error: String) {
-                            // no op
+                            // Sin accion en caso de error (la prueba falla por assertion)
                         }
 
                         override fun onResults(
@@ -52,21 +53,19 @@ class TFObjectDetectionTest {
 
                             assertEquals(controlResults.size, results!!.size)
 
-                            // Loop through the detected and control data
+                            // Recorre los resultados detectados y los datos de control
                             for (i in controlResults.indices) {
-                                // Verify that the bounding boxes are the same
+                                // Verifica que los cuadros de deteccion sean iguales
                                 assertEquals(results[i].boundingBox, controlResults[i].boundingBox)
 
-                                // Verify that the detected data and control
-                                // data have the same number of categories
+                                // Verifica que el numero de categorias detectadas sea igual
                                 assertEquals(
                                     results[i].categories.size,
                                     controlResults[i].categories.size
                                 )
 
-                                // Loop through the categories
+                                // Recorre las categorias y verifica que las etiquetas coincidan
                                 for (j in 0 until controlResults[i].categories.size - 1) {
-                                    // Verify that the labels are consistent
                                     assertEquals(
                                         results[i].categories[j].label,
                                         controlResults[i].categories[j].label
@@ -76,9 +75,8 @@ class TFObjectDetectionTest {
                         }
                     }
             )
-        // Create Bitmap and convert to TensorImage
+        // Carga la imagen de prueba y ejecuta el detector
         val bitmap = loadImage("cat1.png")
-        // Run the object detector on the sample image
         objectDetectorHelper.detect(bitmap!!, 0)
     }
 
@@ -109,9 +107,8 @@ class TFObjectDetectionTest {
                     }
             )
 
-            // Create Bitmap and convert to TensorImage
+            // Carga la imagen de prueba y ejecuta el detector
             val bitmap = loadImage("cat1.png")
-            // Run the object detector on the sample image
             objectDetectorHelper.detect(bitmap!!, 0)
     }
 

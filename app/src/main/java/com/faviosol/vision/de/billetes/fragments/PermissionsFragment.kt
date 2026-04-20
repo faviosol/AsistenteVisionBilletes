@@ -14,38 +14,59 @@ import com.faviosol.vision.de.billetes.R
 private val PERMISSIONS_REQUIRED = arrayOf(Manifest.permission.CAMERA)
 
 /**
- * The sole purpose of this fragment is to request permissions and, once granted, display the
- * camera fragment to the user.
+ * Fragment cuya unica responsabilidad es solicitar el permiso de camara al usuario.
+ *
+ * Si el permiso ya fue concedido, navega directamente a [CameraFragment].
+ * Si no fue concedido, lanza el dialogo del sistema para pedirlo.
+ * Si el usuario lo niega, muestra un mensaje informativo.
  */
 class PermissionsFragment : Fragment() {
 
+    // =====================================================
+    // SOLICITUD DE PERMISO
+    // =====================================================
+
+    // Lanzador moderno de permisos (reemplaza el deprecated onRequestPermissionsResult)
     private val requestPermissionLauncher =
         registerForActivityResult(ActivityResultContracts.RequestPermission()
         ) { isGranted: Boolean ->
             if (isGranted) {
-                Toast.makeText(context, "Permission request granted", Toast.LENGTH_LONG).show()
+                Toast.makeText(context, "Permiso de camara concedido", Toast.LENGTH_LONG).show()
                 navigateToCamera()
             } else {
-                Toast.makeText(context, "Permission request denied", Toast.LENGTH_LONG).show()
+                Toast.makeText(context, "Permiso de camara denegado", Toast.LENGTH_LONG).show()
             }
         }
+
+    // =====================================================
+    // CICLO DE VIDA
+    // =====================================================
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         when {
+            // Si el permiso ya estaba concedido, ir directo a la camara
             ContextCompat.checkSelfPermission(
                 requireContext(),
                 Manifest.permission.CAMERA
             ) == PackageManager.PERMISSION_GRANTED -> {
                 navigateToCamera()
             }
+            // Si no, mostrar el dialogo del sistema para pedirlo
             else -> {
-                requestPermissionLauncher.launch(
-                    Manifest.permission.CAMERA)
+                requestPermissionLauncher.launch(Manifest.permission.CAMERA)
             }
         }
     }
 
+    // =====================================================
+    // NAVEGACION
+    // =====================================================
+
+    /**
+     * Navega al CameraFragment usando el NavController del grafo de navegacion.
+     * Se ejecuta dentro de launchWhenStarted para evitar transiciones en estado invalido.
+     */
     private fun navigateToCamera() {
         lifecycleScope.launchWhenStarted {
             Navigation.findNavController(requireActivity(), R.id.fragment_container).navigate(
@@ -56,7 +77,10 @@ class PermissionsFragment : Fragment() {
 
     companion object {
 
-        /** Convenience method used to check if all permissions required by this app are granted */
+        /**
+         * Verifica si todos los permisos necesarios para la app ya fueron concedidos.
+         * Se usa desde CameraFragment en onResume() para detectar si el permiso fue revocado.
+         */
         fun hasPermissions(context: Context) = PERMISSIONS_REQUIRED.all {
             ContextCompat.checkSelfPermission(context, it) == PackageManager.PERMISSION_GRANTED
         }

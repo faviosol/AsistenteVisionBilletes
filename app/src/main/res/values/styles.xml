@@ -2,7 +2,7 @@
 
 <resources>
 
-    <!-- Base application theme. -->
+    <!-- Tema base de la aplicacion (sin ActionBar, porque usamos toolbar personalizado) -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
     </style>
 

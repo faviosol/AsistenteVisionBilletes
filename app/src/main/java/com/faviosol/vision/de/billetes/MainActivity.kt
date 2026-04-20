@@ -6,11 +6,14 @@ import androidx.appcompat.app.AppCompatActivity
 import com.faviosol.vision.de.billetes.databinding.ActivityMainBinding
 
 /**
- * Main entry point into our app. This app follows the single-activity pattern, and all
- * functionality is implemented in the form of fragments.
+ * Punto de entrada principal de la aplicación.
+ *
+ * Sigue el patrón Single Activity: una sola Activity que actúa como
+ * contenedor, y toda la lógica de pantallas se implementa en Fragments.
  */
 class MainActivity : AppCompatActivity() {
 
+    // Binding generado automáticamente a partir de activity_main.xml
     private lateinit var activityMainBinding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,8 +24,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         if (Build.VERSION.SDK_INT == Build.VERSION_CODES.Q) {
-            // Workaround for Android Q memory leak issue in IRequestFinishCallback$Stub.
-            // (https://issuetracker.google.com/issues/139738913)
+            // Solución temporal para un bug de fuga de memoria en Android 10 (Q)
+            // con IRequestFinishCallback$Stub. Ver: issuetracker.google.com/issues/139738913
             finishAfterTransition()
         } else {
             super.onBackPressed()
