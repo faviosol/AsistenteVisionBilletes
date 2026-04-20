@@ -78,7 +78,7 @@ MERGED from [org.tensorflow:tensorflow-lite-api:2.14.0] C:\Users\USER\.gradle\ca
 MERGED from [org.tensorflow:tensorflow-lite-task-base:0.4.4] C:\Users\USER\.gradle\caches\8.14.4\transforms\dd90b4b1b1cfb292e27175ad1623c4c1\transformed\jetified-tensorflow-lite-task-base-0.4.4\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\USER\.gradle\caches\8.14.4\transforms\bc3fd8264b29eda3e441cc0e4ab5d1c4\transformed\jetified-image-1.0.0-beta1\AndroidManifest.xml:2:1-9:12
 	package
-		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:6:5-59
+		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:6:5-61
 		INJECTED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml
@@ -151,7 +151,7 @@ MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\USER\.gradle\ca
 		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:21:9-35
 	android:taskAffinity
 		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:22:9-32
-activity#org.tensorflow.lite.examples.objectdetection.MainActivity
+activity#org.tensorflow.lite.examples.asistentebilletes.MainActivity
 ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:25:9-45:20
 	android:clearTaskOnLaunch
 		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:27:13-45
@@ -170,7 +170,7 @@ ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\Asistente
 	android:theme
 		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:28:13-44
 	android:name
-		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:26:13-41
+		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:26:13-87
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:37:13-40:29
 action#android.intent.action.MAIN

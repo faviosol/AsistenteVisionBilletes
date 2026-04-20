@@ -1,26 +1,14 @@
 [
     {
-        "merged": "org.tensorflow.lite.examples.objectdetection.app-mergeDebugResources-52:/layout/fragment_camera.xml",
-        "source": "org.tensorflow.lite.examples.objectdetection.app-main-55:/layout/fragment_camera.xml"
+        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-mergeDebugResources-52:/layout/info_bottom_sheet.xml",
+        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/layout/info_bottom_sheet.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.14.4\\org.tensorflow.lite.examples.objectdetection.app-mergeDebugResources-52:\\layout\\info_bottom_sheet.xml",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.14.4\\org.tensorflow.lite.examples.objectdetection.app-main-55:\\layout\\info_bottom_sheet.xml"
+        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-mergeDebugResources-52:/layout/fragment_camera.xml",
+        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/layout/fragment_camera.xml"
     },
     {
-        "merged": "org.tensorflow.lite.examples.objectdetection.app-mergeDebugResources-52:/layout/info_bottom_sheet.xml",
-        "source": "org.tensorflow.lite.examples.objectdetection.app-main-55:/layout/info_bottom_sheet.xml"
-    },
-    {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.14.4\\org.tensorflow.lite.examples.objectdetection.app-mergeDebugResources-52:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.14.4\\org.tensorflow.lite.examples.objectdetection.app-main-55:\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "org.tensorflow.lite.examples.objectdetection.app-mergeDebugResources-52:/layout/activity_main.xml",
-        "source": "org.tensorflow.lite.examples.objectdetection.app-main-55:/layout/activity_main.xml"
-    },
-    {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.14.4\\org.tensorflow.lite.examples.objectdetection.app-mergeDebugResources-52:\\layout\\fragment_camera.xml",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.14.4\\org.tensorflow.lite.examples.objectdetection.app-main-55:\\layout\\fragment_camera.xml"
+        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-mergeDebugResources-52:/layout/activity_main.xml",
+        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/layout/activity_main.xml"
     }
 ]

@@ -38,7 +38,7 @@
         android:taskAffinity=""
         android:testOnly="true" >
         <activity
-            android:name="org.tensorflow.lite.examples.objectdetection.MainActivity"
+            android:name="org.tensorflow.lite.examples.asistentebilletes.MainActivity"
             android:clearTaskOnLaunch="true"
             android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize"
             android:exported="true"

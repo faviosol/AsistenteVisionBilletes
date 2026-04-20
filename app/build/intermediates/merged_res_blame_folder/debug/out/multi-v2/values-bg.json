@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "org.tensorflow.lite.examples.objectdetection.app-mergeDebugResources-51:/values-bg/values-bg.xml",
+            "outputFile": "org.tensorflow.lite.examples.asistentebilletes.app-mergeDebugResources-51:/values-bg/values-bg.xml",
             "map": [
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\8.14.4\\transforms\\c99ec56450c30568b522ba329a2a54c4\\transformed\\navigation-ui-2.5.3\\res\\values-bg\\values-bg.xml",

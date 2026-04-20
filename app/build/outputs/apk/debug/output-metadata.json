@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "org.tensorflow.lite.examples.objectdetection",
+  "applicationId": "com.faviosol.vision.de.billetes",
   "variantName": "debug",
   "elements": [
     {

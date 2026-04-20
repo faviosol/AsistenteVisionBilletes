@@ -5,7 +5,7 @@ apply plugin: "androidx.navigation.safeargs"
 apply plugin: 'de.undercouch.download'
 
 android {
-    namespace 'org.tensorflow.lite.examples.objectdetection'
+    namespace 'org.tensorflow.lite.examples.asistentebilletes'
     compileSdkVersion 34
 
     kapt {
