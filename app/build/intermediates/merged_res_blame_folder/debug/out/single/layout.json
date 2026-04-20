@@ -1,14 +1,14 @@
 [
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-mergeDebugResources-52:/layout/info_bottom_sheet.xml",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/layout/info_bottom_sheet.xml"
+        "merged": "com.faviosol.vision.de.billetes.app-mergeDebugResources-52:/layout/activity_main.xml",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/layout/activity_main.xml"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-mergeDebugResources-52:/layout/fragment_camera.xml",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/layout/fragment_camera.xml"
+        "merged": "com.faviosol.vision.de.billetes.app-mergeDebugResources-52:/layout/fragment_camera.xml",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/layout/fragment_camera.xml"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-mergeDebugResources-52:/layout/activity_main.xml",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/layout/activity_main.xml"
+        "merged": "com.faviosol.vision.de.billetes.app-mergeDebugResources-52:/layout/info_bottom_sheet.xml",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/layout/info_bottom_sheet.xml"
     }
 ]

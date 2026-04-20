@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "org.tensorflow.lite.examples.asistentebilletes.app-mergeDebugResources-51:/values/values.xml",
+            "outputFile": "com.faviosol.vision.de.billetes.app-mergeDebugResources-51:/values/values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\8.14.4\\transforms\\67302a8998a2e7bb87899ab17d39a351\\transformed\\constraintlayout-2.1.4\\res\\values\\values.xml",

@@ -1,1 +1,1 @@
-[{"navFile":"src\\main\\res\\navigation\\nav_graph.xml","javaFiles":["org.tensorflow.lite.examples.asistentebilletes.fragments.PermissionsFragmentDirections","org.tensorflow.lite.examples.asistentebilletes.fragments.CameraFragmentDirections"]}]
+[{"navFile":"src\\main\\res\\navigation\\nav_graph.xml","javaFiles":["com.faviosol.vision.de.billetes.fragments.PermissionsFragmentDirections","com.faviosol.vision.de.billetes.fragments.CameraFragmentDirections"]}]

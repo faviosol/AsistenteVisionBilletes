@@ -1,110 +1,110 @@
 [
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/mipmap-xxxhdpi/ic_launcher.png"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/mipmap-xxhdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/mipmap-hdpi/ic_launcher_round.png"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/mipmap-xhdpi/ic_launcher.png"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/layout_info_bottom_sheet.xml.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/layout/info_bottom_sheet.xml"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/mipmap-hdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/mipmap-xhdpi/ic_launcher_round.png"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/drawable_ic_plus.xml.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/drawable/ic_plus.xml"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/mipmap-xxhdpi/ic_launcher_foreground.png"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/mipmap-mdpi/ic_launcher_round.png"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/color_selector_ic.xml.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/color/selector_ic.xml"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/navigation_nav_graph.xml.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/navigation/nav_graph.xml"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/mipmap-xxhdpi/ic_launcher_round.png"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/drawable-v24_tfl_logo.png.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/drawable-v24/tfl_logo.png"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/mipmap-hdpi/ic_launcher.png"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/layout_fragment_camera.xml.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/layout/fragment_camera.xml"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/drawable-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/mipmap-hdpi_ic_launcher_foreground.png.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/mipmap-hdpi/ic_launcher_foreground.png"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/mipmap-xxxhdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/mipmap-mdpi_ic_launcher_foreground.png.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/mipmap-mdpi/ic_launcher_foreground.png"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/drawable_icn_chevron_up.png.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/drawable/icn_chevron_up.png"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/drawable-v24/ic_launcher_foreground.xml"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/layout_info_bottom_sheet.xml.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/layout/info_bottom_sheet.xml"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/color_selector_ic.xml.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/color/selector_ic.xml"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/navigation_nav_graph.xml.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/navigation/nav_graph.xml"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/layout_fragment_camera.xml.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/layout/fragment_camera.xml"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/mipmap-xhdpi/ic_launcher_foreground.png"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/mipmap-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/drawable_ic_plus.xml.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/drawable/ic_plus.xml"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/mipmap-xxxhdpi/ic_launcher_round.png"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/mipmap-xhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/drawable_ic_minus.xml.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/drawable/ic_minus.xml"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/mipmap-hdpi/ic_launcher_round.png"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/drawable-v24_tfl_logo.png.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/drawable-v24/tfl_logo.png"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/mipmap-mdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/mipmap-mdpi/ic_launcher.png"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/drawable_ic_minus.xml.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/drawable/ic_minus.xml"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/layout_activity_main.xml.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/layout/activity_main.xml"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/mipmap-xhdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/mipmap-mdpi/ic_launcher_round.png"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/drawable_icn_chevron_up.png.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/drawable/icn_chevron_up.png"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/layout_activity_main.xml.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/layout/activity_main.xml"
     },
     {
-        "merged": "org.tensorflow.lite.examples.asistentebilletes.app-merged_res-53:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "org.tensorflow.lite.examples.asistentebilletes.app-main-55:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "com.faviosol.vision.de.billetes.app-merged_res-53:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.faviosol.vision.de.billetes.app-main-55:/mipmap-xxhdpi/ic_launcher_round.png"
     }
 ]

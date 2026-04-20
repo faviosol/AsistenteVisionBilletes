@@ -57,8 +57,8 @@
 39        android:testOnly="true" >
 40        <activity
 40-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:25:9-45:20
-41            android:name="org.tensorflow.lite.examples.asistentebilletes.MainActivity"
-41-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:26:13-87
+41            android:name="com.faviosol.vision.de.billetes.MainActivity"
+41-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:26:13-72
 42            android:clearTaskOnLaunch="true"
 42-->C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:27:13-45
 43            android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize"

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "org.tensorflow.lite.examples.asistentebilletes.app-mergeDebugResources-51:/values-fr-rCA/values-fr-rCA.xml",
+            "outputFile": "com.faviosol.vision.de.billetes.app-mergeDebugResources-51:/values-fr-rCA/values-fr-rCA.xml",
             "map": [
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\8.14.4\\transforms\\845ed0b8be1b4ba8abad1e56393242ee\\transformed\\appcompat-1.6.1\\res\\values-fr-rCA\\values-fr-rCA.xml",
