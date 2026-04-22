@@ -12,7 +12,7 @@ import java.nio.ByteBuffer
 import java.nio.ByteOrder
 
 class BilleteClassifier(
-    var threshold: Float = 0.8f,
+    var threshold: Float = 0.5f,
     var numThreads: Int = 2,
     var maxResults: Int = 1,
     var currentDelegate: Int = 0,
@@ -22,7 +22,7 @@ class BilleteClassifier(
     private var interpreter: Interpreter? = null
     private var labels: List<String> = emptyList()
 
-    private val modelName  = "billetes_v2.tflite"
+    private val modelName  = "billetes_v3.tflite"
     private val labelsName = "labels.txt"
     private val inputSize  = 224
 
@@ -48,10 +48,35 @@ class BilleteClassifier(
         }
     }
 
+    private fun tieneFormaBillete(bitmap: Bitmap): Boolean {
+        val W = 64; val H = 64
+        val mini = Bitmap.createScaledBitmap(bitmap, W, H, false)
+        val pixeles = IntArray(W * H)
+        mini.getPixels(pixeles, 0, W, 0, 0, W, H)
+        mini.recycle()
+
+        val gris = IntArray(W * H) { i ->
+            val p = pixeles[i]
+            ((p shr 16 and 0xFF) + (p shr 8 and 0xFF) + (p and 0xFF)) / 3
+        }
+
+        // Varianza global: descarta fondos totalmente planos (pared, mesa sin nada)
+        val media = gris.average()
+        val varianza = gris.sumOf { (it - media).let { d -> d * d } } / gris.size
+        Log.d("Prefiltro", "varianza=%.1f".format(varianza))
+        return varianza >= 200.0
+    }
+
     fun clasificar(imagen: Bitmap, rotacion: Int) {
         if (interpreter == null) configurar()
 
-        var tiempoInicio = SystemClock.uptimeMillis()
+        val tiempoInicio = SystemClock.uptimeMillis()
+
+        if (!tieneFormaBillete(imagen)) {
+            Log.d("BilleteClassifier", "Prefiltro rechazó el frame")
+            listener?.onResultado(BilleteDeteccion("ninguno", 0f, SystemClock.uptimeMillis() - tiempoInicio))
+            return
+        }
 
         try {
             val rotada = if (rotacion != 0) {
@@ -79,6 +104,7 @@ class BilleteClassifier(
             val maxIdx = probs.indices.maxByOrNull { probs[it] } ?: return
             val etiqueta = if (maxIdx < labels.size) labels[maxIdx] else "desconocido"
 
+            Log.d("BilleteClassifier", "etiqueta=$etiqueta puntaje=%.2f".format(probs[maxIdx]))
             listener?.onResultado(BilleteDeteccion(etiqueta, probs[maxIdx], tiempoInferencia))
 
         } catch (e: Exception) {

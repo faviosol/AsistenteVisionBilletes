@@ -57,7 +57,14 @@ class CameraFragment : Fragment(), BilleteClassifier.ClasificadorListener {
     private var lastSpokenTime: Long = 0L
     private val TTS_COOLDOWN_MS = 15000L
 
+    private val colaVotos    = ArrayDeque<String>()
+    private val colaPuntajes = ArrayDeque<Float>()
+    private val TAMANO_COLA      = 7
+    private val VOTOS_MINIMOS    = 5
+    private val CONFIANZA_MINIMA = 0.85f
+
     private val vibrationPatterns = mapOf(
+        "200" to longArrayOf(0, 500, 100, 500),
         "100" to longArrayOf(0, 500),
         "50"  to longArrayOf(0, 200, 100, 200, 100, 200),
         "20"  to longArrayOf(0, 200, 100, 200),
@@ -160,6 +167,9 @@ class CameraFragment : Fragment(), BilleteClassifier.ClasificadorListener {
         fragmentCameraBinding.bottomSheetLayout.thresholdValue.text = String.format("%.2f", clasificador.threshold)
         fragmentCameraBinding.bottomSheetLayout.threadsValue.text = clasificador.numThreads.toString()
         clasificador.limpiar()
+        colaVotos.clear()
+        colaPuntajes.clear()
+        lastSpokenDenomination = ""
         fragmentCameraBinding.overlay.clear()
     }
 
@@ -216,8 +226,8 @@ class CameraFragment : Fragment(), BilleteClassifier.ClasificadorListener {
         imageAnalyzer?.targetRotation = fragmentCameraBinding.viewFinder.display.rotation
     }
 
-    private fun vibrate(label: String) {
-        val pattern = vibrationPatterns.entries.firstOrNull { label.contains(it.key) }?.value ?: return
+    private fun vibrate(denominacion: String) {
+        val pattern = vibrationPatterns[denominacion] ?: return
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             val manager = requireContext().getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager
             manager.defaultVibrator.vibrate(VibrationEffect.createWaveform(pattern, -1))
@@ -229,38 +239,81 @@ class CameraFragment : Fragment(), BilleteClassifier.ClasificadorListener {
         }
     }
 
-    private fun labelToSpanish(label: String): String {
-        return when {
-            label.contains("100") -> "Billete de cien soles"
-            label.contains("50")  -> "Billete de cincuenta soles"
-            label.contains("20")  -> "Billete de veinte soles"
-            label.contains("10")  -> "Billete de diez soles"
-            else                  -> "Billete detectado"
-        }
-    }
-
     override fun onResultado(deteccion: BilleteDeteccion) {
         activity?.runOnUiThread {
             fragmentCameraBinding.bottomSheetLayout.inferenceTimeVal.text =
                 String.format("%d ms", deteccion.tiempoInferencia)
-
             fragmentCameraBinding.overlay.clear()
 
-            if (deteccion.puntaje >= clasificador.threshold) {
-                val denomination = when {
-                    deteccion.etiqueta.contains("100") -> "100"
-                    deteccion.etiqueta.contains("50")  -> "50"
-                    deteccion.etiqueta.contains("20")  -> "20"
-                    deteccion.etiqueta.contains("10")  -> "10"
-                    else                               -> deteccion.etiqueta
+            // Denominación y puntaje de este frame
+            val voto = when {
+                deteccion.puntaje < clasificador.threshold -> "ninguno"
+                deteccion.etiqueta.contains("200") -> "200"
+                deteccion.etiqueta.contains("100") -> "100"
+                deteccion.etiqueta.contains("50")  -> "50"
+                deteccion.etiqueta.contains("20")  -> "20"
+                deteccion.etiqueta.contains("10")  -> "10"
+                else -> "ninguno"
+            }
+            val puntaje = if (voto == "ninguno") 0f else deteccion.puntaje
+
+            // Mantener cola de tamaño fijo
+            if (colaVotos.size >= TAMANO_COLA) {
+                colaVotos.removeFirst()
+                colaPuntajes.removeFirst()
+            }
+            colaVotos.addLast(voto)
+            colaPuntajes.addLast(puntaje)
+
+            if (colaVotos.size < TAMANO_COLA) return@runOnUiThread
+
+            // Agrupar votos reales (no "ninguno") con sus puntajes
+            val grupos = mutableMapOf<String, MutableList<Float>>()
+            colaVotos.forEachIndexed { i, den ->
+                if (den != "ninguno") grupos.getOrPut(den) { mutableListOf() }.add(colaPuntajes[i])
+            }
+
+            // Si casi todo es "ninguno", el encuadre no tiene billete → reset
+            val totalReales = grupos.values.sumOf { it.size }
+            if (totalReales <= 1) {
+                lastSpokenDenomination = ""
+                return@runOnUiThread
+            }
+
+            Log.d("Votos", grupos.mapValues { "${it.value.size}v avg=%.2f".format(it.value.average()) }.toString())
+
+            // Ganador: denominación con más votos
+            val ordenados = grupos.entries.sortedByDescending { it.value.size }
+            val ganador   = ordenados.first()
+            val segundo   = ordenados.getOrNull(1)
+
+            // Condición 1: votos suficientes
+            if (ganador.value.size < VOTOS_MINIMOS) return@runOnUiThread
+
+            // Condición 2: confianza promedio del ganador
+            val confianzaPromedio = ganador.value.average()
+            if (confianzaPromedio < CONFIANZA_MINIMA) return@runOnUiThread
+
+            // Condición 3: no hay ambigüedad fuerte con otra denominación
+            if (segundo != null && segundo.value.size >= 3) {
+                Log.d("Votos", "Ambigüedad: ${ganador.key}=${ganador.value.size} vs ${segundo.key}=${segundo.value.size}")
+                return@runOnUiThread
+            }
+
+            val now = System.currentTimeMillis()
+            if (ganador.key != lastSpokenDenomination || now - lastSpokenTime > TTS_COOLDOWN_MS) {
+                val texto = when (ganador.key) {
+                    "200" -> "Billete de doscientos soles"
+                    "100" -> "Billete de cien soles"
+                    "50"  -> "Billete de cincuenta soles"
+                    "20"  -> "Billete de veinte soles"
+                    "10"  -> "Billete de diez soles"
+                    else  -> return@runOnUiThread
                 }
-                val now = System.currentTimeMillis()
-                if (denomination != lastSpokenDenomination || now - lastSpokenTime > TTS_COOLDOWN_MS) {
-                    tts?.speak(labelToSpanish(deteccion.etiqueta), TextToSpeech.QUEUE_FLUSH, null, null)
-                    vibrate(deteccion.etiqueta)
-                    lastSpokenDenomination = denomination
-                    lastSpokenTime = now
-                }
+                tts?.speak(texto, TextToSpeech.QUEUE_FLUSH, null, null)
+                vibrate(ganador.key)
+                lastSpokenDenomination = ganador.key
+                lastSpokenTime = now
             }
         }
     }

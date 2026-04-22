@@ -6,6 +6,8 @@ billete10_anverso_antiguo
 billete10_anverso_nuevo
 billete10_reverso_antiguo
 billete10_reverso_nuevo
+billete200_anverso
+billete200_reverso
 billete20_anverso_antiguo
 billete20_anverso_nuevo
 billete20_reverso_antiguo

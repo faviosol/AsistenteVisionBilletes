@@ -15,3 +15,10 @@ Thumbs.db
 # Scripts y archivos que no pertenecen al proyecto
 crear_pptx.py
 *.pptx
+
+# Contextos privados de sesión
+.claude/
+Visión/
+
+# Assets de prueba
+app/src/androidTest/assets/
