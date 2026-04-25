@@ -1,9 +1,14 @@
 package com.faviosol.vision.de.billetes.fragments
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.res.Configuration
 import android.graphics.Bitmap
+import android.os.Build
 import android.os.Bundle
+import android.os.VibrationEffect
+import android.os.Vibrator
+import android.os.VibratorManager
 import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.view.LayoutInflater
@@ -72,6 +77,14 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
     private var lastSpokenLabel: String = ""
     private var lastSpokenTime: Long = 0L
     private val TTS_COOLDOWN_MS = 3000L
+
+    // Patrones de vibración por denominación: par (espera, vibración) en ms
+    private val vibrationPatterns = mapOf(
+        "10"  to longArrayOf(0, 200),
+        "20"  to longArrayOf(0, 200, 100, 200),
+        "50"  to longArrayOf(0, 200, 100, 200, 100, 200),
+        "100" to longArrayOf(0, 500)
+    )
 
 
     // =====================================================
@@ -406,6 +419,19 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
     // CALLBACKS DEL DETECTOR (RESULTADOS)
     // =====================================================
 
+    private fun vibrate(label: String) {
+        val pattern = vibrationPatterns.entries.firstOrNull { label.contains(it.key) }?.value ?: return
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            val manager = requireContext().getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager
+            manager.defaultVibrator.vibrate(VibrationEffect.createWaveform(pattern, -1))
+        } else {
+            @Suppress("DEPRECATION")
+            val vibrator = requireContext().getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+            @Suppress("DEPRECATION")
+            vibrator.vibrate(pattern, -1)
+        }
+    }
+
     private fun labelToSpanish(label: String): String {
         return when {
             label.contains("10")  -> "Billete de diez soles"
@@ -446,6 +472,7 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
                 val now = System.currentTimeMillis()
                 if (topLabel != lastSpokenLabel || now - lastSpokenTime > TTS_COOLDOWN_MS) {
                     tts?.speak(labelToSpanish(topLabel), TextToSpeech.QUEUE_FLUSH, null, null)
+                    vibrate(topLabel)
                     lastSpokenLabel = topLabel
                     lastSpokenTime = now
                 }
