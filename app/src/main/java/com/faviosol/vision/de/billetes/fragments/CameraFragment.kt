@@ -28,11 +28,9 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import java.util.LinkedList
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 import com.faviosol.vision.de.billetes.ObjectDetectorHelper
-import org.tensorflow.lite.task.vision.detector.Detection
 import com.faviosol.vision.de.billetes.databinding.FragmentCameraBinding
 import com.faviosol.vision.de.billetes.R
 
@@ -74,9 +72,9 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
     private lateinit var cameraExecutor: ExecutorService
 
     private var tts: TextToSpeech? = null
-    private var lastSpokenLabel: String = ""
+    private var lastSpokenDenomination: String = ""
     private var lastSpokenTime: Long = 0L
-    private val TTS_COOLDOWN_MS = 3000L
+    private val TTS_COOLDOWN_MS = 15000L
 
     // Patrones de vibración por denominación: par (espera, vibración) en ms
     private val vibrationPatterns = mapOf(
@@ -442,38 +440,28 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
         }
     }
 
-    // Se llama cuando el detector ha encontrado objetos
+    // Se llama cuando el clasificador tiene un resultado
     // (Implementa la interfaz DetectorListener)
-    override fun onResults(
-        results: MutableList<Detection>?,  // Objetos detectados
-        inferenceTime: Long,               // Tiempo que tardó la detección (en ms)
-        imageHeight: Int,                  // Alto de la imagen procesada
-        imageWidth: Int                    // Ancho de la imagen procesada
-    ) {
-        // Ejecuta en el hilo principal de UI (porque estamos en un hilo de fondo)
+    override fun onResults(label: String, score: Float, inferenceTime: Long) {
         activity?.runOnUiThread {
-            // Muestra el tiempo que tardó en detectar
             fragmentCameraBinding.bottomSheetLayout.inferenceTimeVal.text =
                 String.format("%d ms", inferenceTime)
 
-            // Envía los resultados a la vista de overlay para que dibuje los cuadros
-            fragmentCameraBinding.overlay.setResults(
-                results ?: LinkedList<Detection>(),  // Si es nulo, usa una lista vacía
-                imageHeight,
-                imageWidth
-            )
+            fragmentCameraBinding.overlay.clear()
 
-            // Fuerza a redibujar la pantalla con los nuevos cuadros
-            fragmentCameraBinding.overlay.invalidate()
-
-            // Anuncia en voz alta el billete detectado con mayor confianza
-            val topLabel = results?.firstOrNull()?.categories?.firstOrNull()?.label
-            if (topLabel != null) {
+            if (score >= objectDetectorHelper.threshold) {
+                val denomination = when {
+                    label.contains("100") -> "100"
+                    label.contains("50")  -> "50"
+                    label.contains("20")  -> "20"
+                    label.contains("10")  -> "10"
+                    else                  -> label
+                }
                 val now = System.currentTimeMillis()
-                if (topLabel != lastSpokenLabel || now - lastSpokenTime > TTS_COOLDOWN_MS) {
-                    tts?.speak(labelToSpanish(topLabel), TextToSpeech.QUEUE_FLUSH, null, null)
-                    vibrate(topLabel)
-                    lastSpokenLabel = topLabel
+                if (denomination != lastSpokenDenomination || now - lastSpokenTime > TTS_COOLDOWN_MS) {
+                    tts?.speak(labelToSpanish(label), TextToSpeech.QUEUE_FLUSH, null, null)
+                    vibrate(label)
+                    lastSpokenDenomination = denomination
                     lastSpokenTime = now
                 }
             }
