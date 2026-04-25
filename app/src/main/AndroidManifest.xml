@@ -24,7 +24,7 @@
         tools:ignore="AllowBackup">
 
         <activity
-            android:name="com.faviosol.vision.de.billetes.MainActivity"
+            android:name="com.faviosol.vision.de.billetes.ui.MainActivity"
             android:clearTaskOnLaunch="true"
             android:theme="@style/AppTheme"
             android:exported="true"

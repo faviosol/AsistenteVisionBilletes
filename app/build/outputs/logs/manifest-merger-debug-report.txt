@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:2:1-49:12
-INJECTED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:2:1-49:12
-INJECTED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:2:1-49:12
-INJECTED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:2:1-49:12
+ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:2:1-50:12
 MERGED from [androidx.databinding:viewbinding:8.1.4] C:\Users\USER\.gradle\caches\8.14.4\transforms\413971d50734c7223c233b633e9d6143\transformed\jetified-viewbinding-8.1.4\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-ui-ktx:2.5.3] C:\Users\USER\.gradle\caches\8.14.4\transforms\f227c3ecb3328febc414f0df375f1e4d\transformed\navigation-ui-ktx-2.5.3\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-ui:2.5.3] C:\Users\USER\.gradle\caches\8.14.4\transforms\c99ec56450c30568b522ba329a2a54c4\transformed\navigation-ui-2.5.3\AndroidManifest.xml:17:1-24:12
@@ -102,9 +102,13 @@ uses-permission#android.permission.CAMERA
 ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:15:5-65
 	android:name
 		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:15:22-62
+uses-permission#android.permission.VIBRATE
+ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:16:5-66
+	android:name
+		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:16:22-63
 application
-ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:17:5-47:19
-INJECTED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:17:5-47:19
+ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:18:5-48:19
+INJECTED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:18:5-48:19
 MERGED from [com.google.android.material:material:1.9.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\465fc074eafd046898fb6b009ae33f3a\transformed\material-1.9.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.9.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\465fc074eafd046898fb6b009ae33f3a\transformed\material-1.9.0\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\USER\.gradle\caches\8.14.4\transforms\67302a8998a2e7bb87899ab17d39a351\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -140,53 +144,53 @@ MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\USER\.gradle\ca
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.12.0] C:\Users\USER\.gradle\caches\8.14.4\transforms\b5642cbb50cde35e376b6358bcc006ea\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
 	android:label
-		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:20:9-41
+		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:21:9-41
 	tools:ignore
-		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:23:9-35
+		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:24:9-35
 	android:roundIcon
-		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:19:9-54
+		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:20:9-54
 	android:icon
-		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:18:9-43
+		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:19:9-43
 	android:allowBackup
-		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:21:9-35
+		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:22:9-35
 	android:taskAffinity
-		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:22:9-32
-activity#com.faviosol.vision.de.billetes.MainActivity
-ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:25:9-45:20
+		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:23:9-32
+activity#com.faviosol.vision.de.billetes.ui.MainActivity
+ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:26:9-46:20
 	android:clearTaskOnLaunch
-		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:27:13-45
+		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:28:13-45
 	android:exported
-		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:29:13-36
+		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:30:13-36
 	android:resizeableActivity
-		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:32:13-46
+		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:33:13-46
 	android:rotationAnimation
-		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:31:13-49
+		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:32:13-49
 	android:configChanges
-		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:33:13-91
+		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:34:13-91
 	tools:targetApi
-		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:34:13-32
+		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:35:13-32
 	android:icon
-		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:30:13-47
+		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:31:13-47
 	android:theme
-		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:28:13-44
+		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:29:13-44
 	android:name
-		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:26:13-72
+		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:27:13-75
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:37:13-40:29
+ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:38:13-41:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:38:17-69
+ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:39:17-69
 	android:name
-		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:38:25-66
+		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:39:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:39:17-77
+ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:40:17-77
 	android:name
-		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:39:27-74
+		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:40:27-74
 meta-data#android.notch_support
-ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:43:13-83
+ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:44:13-83
 	android:value
-		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:43:61-81
+		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:44:61-81
 	android:name
-		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:43:24-60
+		ADDED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:44:24-60
 uses-sdk
 INJECTED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml
@@ -418,8 +422,8 @@ ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\USER\.gradle\ca
 	android:name
 		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\USER\.gradle\caches\8.14.4\transforms\7fdf9db19b88652b0f5006a9a74a3555\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-IMPLIED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:2:1-49:12 reason: src.java.org.tensorflow.lite.task.core has a targetSdkVersion < 4
+IMPLIED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:2:1-50:12 reason: src.java.org.tensorflow.lite.task.core has a targetSdkVersion < 4
 uses-permission#android.permission.READ_PHONE_STATE
-IMPLIED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:2:1-49:12 reason: src.java.org.tensorflow.lite.task.core has a targetSdkVersion < 4
+IMPLIED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:2:1-50:12 reason: src.java.org.tensorflow.lite.task.core has a targetSdkVersion < 4
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-IMPLIED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:2:1-49:12 reason: src.java.org.tensorflow.lite.task.core requested WRITE_EXTERNAL_STORAGE
+IMPLIED from C:\Users\USER\Desktop\Documentos de la U\Proyecto de github\AsistenteVisionBilletes\android\app\src\main\AndroidManifest.xml:2:1-50:12 reason: src.java.org.tensorflow.lite.task.core requested WRITE_EXTERNAL_STORAGE

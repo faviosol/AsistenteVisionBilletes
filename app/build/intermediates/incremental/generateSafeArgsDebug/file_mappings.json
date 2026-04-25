@@ -1,1 +1,1 @@
-[{"navFile":"src\\main\\res\\navigation\\nav_graph.xml","javaFiles":["com.faviosol.vision.de.billetes.fragments.PermissionsFragmentDirections","com.faviosol.vision.de.billetes.fragments.CameraFragmentDirections"]}]
+[{"navFile":"src\\main\\res\\navigation\\nav_graph.xml","javaFiles":["com.faviosol.vision.de.billetes.ui.fragments.PermissionsFragmentDirections","com.faviosol.vision.de.billetes.ui.fragments.CameraFragmentDirections"]}]

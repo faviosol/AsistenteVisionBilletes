@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         app:scaleType="fillStart"/>
 
-    <com.faviosol.vision.de.billetes.OverlayView
+    <com.faviosol.vision.de.billetes.ui.OverlayView
         android:id="@+id/overlay"
         android:layout_height="match_parent"
         android:layout_width="match_parent" />

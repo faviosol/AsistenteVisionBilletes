@@ -17,6 +17,7 @@
 
     <!-- Declare permissions -->
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <permission
         android:name="com.faviosol.vision.de.billetes.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
@@ -38,7 +39,7 @@
         android:taskAffinity=""
         android:testOnly="true" >
         <activity
-            android:name="com.faviosol.vision.de.billetes.MainActivity"
+            android:name="com.faviosol.vision.de.billetes.ui.MainActivity"
             android:clearTaskOnLaunch="true"
             android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize"
             android:exported="true"

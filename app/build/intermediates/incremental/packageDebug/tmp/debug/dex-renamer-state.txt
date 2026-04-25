@@ -1,19 +1,22 @@
-#Sun Apr 19 23:35:25 PET 2026
+#Sat Apr 25 02:48:14 PET 2026
 base.0=C\:\\Users\\USER\\Desktop\\Documentos de la U\\Proyecto de github\\AsistenteVisionBilletes\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\USER\\Desktop\\Documentos de la U\\Proyecto de github\\AsistenteVisionBilletes\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=C\:\\Users\\USER\\Desktop\\Documentos de la U\\Proyecto de github\\AsistenteVisionBilletes\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
+base.2=C\:\\Users\\USER\\Desktop\\Documentos de la U\\Proyecto de github\\AsistenteVisionBilletes\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
 base.3=C\:\\Users\\USER\\Desktop\\Documentos de la U\\Proyecto de github\\AsistenteVisionBilletes\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
 base.4=C\:\\Users\\USER\\Desktop\\Documentos de la U\\Proyecto de github\\AsistenteVisionBilletes\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
-base.5=C\:\\Users\\USER\\Desktop\\Documentos de la U\\Proyecto de github\\AsistenteVisionBilletes\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.5=C\:\\Users\\USER\\Desktop\\Documentos de la U\\Proyecto de github\\AsistenteVisionBilletes\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
+base.6=C\:\\Users\\USER\\Desktop\\Documentos de la U\\Proyecto de github\\AsistenteVisionBilletes\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
-path.2=2/classes.dex
+path.2=13/classes.dex
 path.3=3/classes.dex
 path.4=5/classes.dex
-path.5=classes2.dex
+path.5=9/classes.dex
+path.6=classes2.dex
 renamed.0=classes.dex
 renamed.1=classes2.dex
 renamed.2=classes3.dex
 renamed.3=classes4.dex
 renamed.4=classes5.dex
 renamed.5=classes6.dex
+renamed.6=classes7.dex

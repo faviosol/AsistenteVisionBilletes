@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- Chevron indicating that the bottom sheet is expandable -->
+        <!-- Flecha que indica que el panel inferior se puede expandir -->
         <RelativeLayout
             android:layout_height="wrap_content"
             android:layout_width="match_parent">
@@ -30,7 +30,7 @@
                 android:contentDescription="@string/alt_bottom_sheet_chevron" />
         </RelativeLayout>
 
-        <!-- Inference time row -->
+        <!-- Fila: tiempo de inferencia (cuanto tarda la IA en procesar) -->
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
                 android:textSize="@dimen/bottom_sheet_text_size" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <!-- ML confidence threshold adjustment row -->
+        <!-- Fila: ajuste del umbral de confianza (que tan seguro debe estar el modelo) -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -106,7 +106,7 @@
             </LinearLayout>
         </RelativeLayout>
 
-        <!-- ML max results adjustment row -->
+        <!-- Fila: ajuste del maximo de resultados (cuantos billetes detectar a la vez) -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -154,7 +154,7 @@
             </LinearLayout>
         </RelativeLayout>
 
-        <!-- Number of threads adjustment row -->
+        <!-- Fila: ajuste del numero de hilos de CPU para la deteccion -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -205,7 +205,7 @@
             </LinearLayout>
         </RelativeLayout>
 
-        <!-- Delegate selection row -->
+        <!-- Fila: selector de procesador (CPU, GPU o NNAPI) -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -230,7 +230,7 @@
 
         </RelativeLayout>
 
-        <!-- Model selection row -->
+        <!-- Fila: selector de modelo de IA -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
