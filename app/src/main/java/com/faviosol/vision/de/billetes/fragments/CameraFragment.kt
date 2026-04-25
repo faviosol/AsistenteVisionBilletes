@@ -4,12 +4,14 @@ import android.annotation.SuppressLint
 import android.content.res.Configuration
 import android.graphics.Bitmap
 import android.os.Bundle
+import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.Toast
+import java.util.Locale
 import androidx.camera.core.AspectRatio
 import androidx.camera.core.Camera
 import androidx.camera.core.CameraSelector
@@ -66,6 +68,11 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
     /** Ejecutor de un solo hilo para operaciones de cámara que bloquean */
     private lateinit var cameraExecutor: ExecutorService
 
+    private var tts: TextToSpeech? = null
+    private var lastSpokenLabel: String = ""
+    private var lastSpokenTime: Long = 0L
+    private val TTS_COOLDOWN_MS = 3000L
+
 
     // =====================================================
     // FASE 1: CUANDO EL FRAGMENT VUELVE A ESTAR VISIBLE
@@ -119,6 +126,12 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
         // Crea un ejecutor de un solo hilo para operaciones de cámara
         // (Esto evita que bloquee el hilo principal de UI)
         cameraExecutor = Executors.newSingleThreadExecutor()
+
+        tts = TextToSpeech(requireContext()) { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                tts?.language = Locale("es", "PE")
+            }
+        }
 
         // Espera a que la vista se haya dibujado completamente en pantalla
         // Esto es importante porque necesita las dimensiones correctas
@@ -393,6 +406,16 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
     // CALLBACKS DEL DETECTOR (RESULTADOS)
     // =====================================================
 
+    private fun labelToSpanish(label: String): String {
+        return when {
+            label.contains("10")  -> "Billete de diez soles"
+            label.contains("20")  -> "Billete de veinte soles"
+            label.contains("50")  -> "Billete de cincuenta soles"
+            label.contains("100") -> "Billete de cien soles"
+            else                  -> "Billete detectado"
+        }
+    }
+
     // Se llama cuando el detector ha encontrado objetos
     // (Implementa la interfaz DetectorListener)
     override fun onResults(
@@ -416,6 +439,17 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
 
             // Fuerza a redibujar la pantalla con los nuevos cuadros
             fragmentCameraBinding.overlay.invalidate()
+
+            // Anuncia en voz alta el billete detectado con mayor confianza
+            val topLabel = results?.firstOrNull()?.categories?.firstOrNull()?.label
+            if (topLabel != null) {
+                val now = System.currentTimeMillis()
+                if (topLabel != lastSpokenLabel || now - lastSpokenTime > TTS_COOLDOWN_MS) {
+                    tts?.speak(labelToSpanish(topLabel), TextToSpeech.QUEUE_FLUSH, null, null)
+                    lastSpokenLabel = topLabel
+                    lastSpokenTime = now
+                }
+            }
         }
     }
 
@@ -443,6 +477,10 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
         // IMPORTANTE: Detiene el ejecutor de cámara
         // Esto es esencial para liberar recursos y evitar memory leaks
         cameraExecutor.shutdown()
+
+        tts?.stop()
+        tts?.shutdown()
+        tts = null
     }
 
 }
