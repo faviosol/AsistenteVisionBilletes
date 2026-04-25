@@ -69,9 +69,9 @@ class ObjectDetectorHelper(
     private var objectDetector: ObjectDetector? = null
 
     /** Nombre del archivo del modelo que está en la carpeta assets/ del proyecto
-     *  "Billetes_Demo_Google.tflite" = este archivo debe estar en:
-     *  proyecto/app/src/main/assets/Billetes_Demo_Google.tflite */
-    private val modelName = "Billetes_Demo_Google.tflite"
+     *  "billetes_v2.tflite" = este archivo debe estar en:
+     *  proyecto/app/src/main/assets/billetes_v2.tflite */
+    private val modelName = "billetes_v2.tflite"
 
 
     // =====================================================
