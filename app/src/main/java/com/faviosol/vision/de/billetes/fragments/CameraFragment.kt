@@ -80,10 +80,10 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
 
     // Patrones de vibración por denominación: par (espera, vibración) en ms
     private val vibrationPatterns = mapOf(
-        "10"  to longArrayOf(0, 200),
-        "20"  to longArrayOf(0, 200, 100, 200),
+        "100" to longArrayOf(0, 500),
         "50"  to longArrayOf(0, 200, 100, 200, 100, 200),
-        "100" to longArrayOf(0, 500)
+        "20"  to longArrayOf(0, 200, 100, 200),
+        "10"  to longArrayOf(0, 200)
     )
 
 
@@ -434,10 +434,10 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
 
     private fun labelToSpanish(label: String): String {
         return when {
-            label.contains("10")  -> "Billete de diez soles"
-            label.contains("20")  -> "Billete de veinte soles"
-            label.contains("50")  -> "Billete de cincuenta soles"
             label.contains("100") -> "Billete de cien soles"
+            label.contains("50")  -> "Billete de cincuenta soles"
+            label.contains("20")  -> "Billete de veinte soles"
+            label.contains("10")  -> "Billete de diez soles"
             else                  -> "Billete detectado"
         }
     }
